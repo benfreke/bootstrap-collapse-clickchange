@@ -1,12 +1,14 @@
 /**
- * Project: Bootstrap Hover Dropdown
- * Author: Cameron Spear
+ * Project: Bootstrap Collapse Clickchange
+ * Author: Ben Freke
  *
  * Dependencies: Bootstrap's Collapse plugin, jQuery
  *
  * A simple plugin to enable Bootstrap collapses to provide additional UX cues.
  *
  * License: GPL v2
+ *
+ * Version: 1.0.1
  */
 (function ( $ ) {
 
@@ -16,7 +18,7 @@
         'when' : 'before',
         'targetclass' : '',
         'parentclass' : '',
-        'iconchange' : true,
+        'iconchange' : false,
         'iconprefix' : 'glyphicon',
         'iconprefixadd' : true,
         'iconclass' : 'chevron-up chevron-down'
@@ -62,12 +64,16 @@
 
             // turn off previous events if we're re-initialising
             if (clickElement.data('clickchange')) {
-                $(document).off(eventStart + '.bs.collapse ' + eventEnd + '.bs.collapse', clickTarget);
+                $(document).off('show.bs.collapse hide.bs.collapse', clickTarget);
+                $(document).off('shown.bs.collapse hidden.bs.collapse', clickTarget);
             }
             clickElement.data('clickchange', 'yes');
 
             // As we're toggling, the same changes happen for both events
             $(document).on(eventStart + '.bs.collapse ' + eventEnd + '.bs.collapse', clickTarget, function(event) {
+
+                // Stop the event bubbling up the chain to the parent collapse
+                event.stopPropagation();
 
                 // Toggle clickable element class?
                 if (settings.parentclass) {
@@ -94,7 +100,10 @@
             if ($(this).data('toggle') != 'collapse') {
                 // It's a grouping, as I place the data on the parent element
                 var theParent = $(this);
-                theParent.find('[data-toggle="collapse"]').clickChange(null, theParent);
+                // Find only the elements that are part of this grouping
+                theParent
+                    .find('[data-parent="#' + theParent.attr('id') + '"]')
+                    .clickChange(null, theParent);
             } else {
                 // This covers stand alone elements
                 $(this).clickChange();

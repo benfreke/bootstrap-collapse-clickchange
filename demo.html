@@ -19,7 +19,7 @@
     <div class="row">
         <div class="col-xs-12">
             <header>
-                <h1>Bootstrap Collapse ClickChange jQuery plugin</h1>
+                <h1>Bootstrap Collapse ClickChange jQuery plugin <small>Version 1.0.1</small></h1>
             </header>
 
             <section class="Information">
@@ -35,25 +35,62 @@
                     <h3 class="panel-title">Multiple Collapse's (i.e. an accordion)</h3>
                 </header>
                 <article class="panel-body">
-                    <div class="panel-group" id="accordion" data-click="clickchange">
+                    <p>
+                        This grouping shows various ways to use the plugin.
+                        It is initialised with the following settings.
+                    </p>
+                    <p>
+                        <code>
+                            data-iconchange="true" data-click="clickchange"
+                        </code>
+                    </p>
+                    <div class="panel-group" id="accordion" data-iconchange="true" data-click="clickchange">
                         <div class="panel panel-info">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
                                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                                        Collapsible Group Item #1
+                                        Collapse within a collapse
+                                        <span class="glyphicon glyphicon-chevron-down"></span>
                                     </a>
                                 </h4>
                             </div>
-                            <div id="collapseOne" class="panel-collapse collapse in">
+                            <div id="collapseOne" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                    richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
-                                    brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
-                                    aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-                                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
-                                    ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
-                                    accusamus labore sustainable VHS.
+
+                                    <div class="panel-group" id="inside-accordion" data-click="clickchange">
+                                        <div class="panel panel-default">
+                                            <header class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#inside-accordion" href="#insideOne">
+                                                        <span class="glyphicon glyphicon-question-sign"></span>
+                                                        Collapse inside a collapse
+                                                        <span class="glyphicon glyphicon-chevron-down"></span>
+                                                    </a>
+                                                </h4>
+                                            </header>
+                                            <div id="insideOne" class="panel-collapse collapse">
+                                                <article class="panel-body">
+                                                    This sort of structure is useful for categorising FAQs. I'm sure there are many other uses as well.
+                                                </article>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <header class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#inside-accordion" href="#insideTwo">
+                                                        <span class="glyphicon glyphicon-question-sign"></span>
+                                                        These icons do not change, to highlight that each collapse grouping has it's own attributes.
+                                                        <span class="glyphicon glyphicon-chevron-down"></span>
+                                                    </a>
+                                                </h4>
+                                            </header>
+                                            <div id="insideTwo" class="panel-collapse collapse">
+                                                <article class="panel-body">
+                                                    Nifty.
+                                                </article>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -61,21 +98,17 @@
                             <div class="panel-heading">
                                 <h4 class="panel-title">
                                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
-                                       data-click="clickchange" data-when="after" data-targetclass="baf8">
-                                        Collapsible Group Item #2
+                                       data-when="after" data-iconchange="true" data-click="clickchange">
+                                        Individual options inside a group
+                                        <span class="glyphicon glyphicon-chevron-down"></span>
                                     </a>
                                 </h4>
                             </div>
                             <div id="collapseTwo" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                    richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
-                                    brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
-                                    aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-                                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
-                                    ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
-                                    accusamus labore sustainable VHS.
+                                    On this link the event is set to fire after the collapse has happened, instead of the default.
+                                    On the other collapses in the group, the icon changes before the collapse.
+                                    This is done via
                                 </div>
                             </div>
                         </div>
@@ -83,20 +116,38 @@
                             <div class="panel-heading">
                                 <h4 class="panel-title">
                                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                                        Collapsible Group Item #3
+                                        Group buttons to highlight the selected options
+                                        <span class="glyphicon glyphicon-chevron-down"></span>
                                     </a>
                                 </h4>
                             </div>
                             <div id="collapseThree" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                    richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
-                                    brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
-                                    aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-                                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
-                                    ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
-                                    accusamus labore sustainable VHS.
+                                    <div class="row" id="btngroup" data-click="clickchange" data-iconchange="true" data-iconclass="ok-sign remove-sign" data-parentclass="btn-danger btn-success">
+                                        <div class="col-xs-4">
+                                            <div class="btn-group btn-group-lg">
+                                                <button data-target="#btntarget1" data-toggle="collapse" type="button" class="btn btn-danger" data-parent="#btngroup" ><span class="glyphicon glyphicon-ok-sign"></span></button>
+                                                <button data-target="#btntarget2" data-toggle="collapse" type="button" class="btn btn-danger" data-parent="#btngroup" ><span class="glyphicon glyphicon-ok-sign"></span></button>
+                                                <button data-target="#btntarget3" data-toggle="collapse" type="button" class="btn btn-danger" data-parent="#btngroup" ><span class="glyphicon glyphicon-ok-sign"></span></button>
+                                                <button data-target="#btntarget4" data-toggle="collapse" type="button" class="btn btn-danger" data-parent="#btngroup" ><span class="glyphicon glyphicon-ok-sign"></span></button>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-8">
+                                            <div class="collapse" id="btntarget1">
+                                                <p>First</p>
+                                            </div>
+                                            <div class="collapse" id="btntarget2">
+                                                <p>Second</p>
+                                            </div>
+                                            <div class="collapse" id="btntarget3">
+                                                <p>Third</p>
+                                            </div>
+                                            <div class="collapse" id="btntarget4">
+                                                <p>Fourth</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -109,25 +160,46 @@
                     <h2 class="panel-title">Demo of a stand alone collapse</h2>
                 </div>
                 <div class="panel-body">
-                    <button id="test2" type="button" class="btn btn-success" data-toggle="collapse"
-                            data-target="#demo-single" data-collapse="clickchange">
-                        <span class="glyphicon glyphicon-chevron-down"></span>
-                        simple collapsible
-                        <span class="glyphicon glyphicon-chevron-down"></span>
+                    <button id="individual" type="button" class="btn btn-primary" data-toggle="collapse"
+                            data-target="#demo-single">
+                        <span class="toggleonclick glyphicon glyphicon-thumbs-up hidden"></span>
+                        <span class="toggleonclick">Click me please!</span>
+                        <span class="toggleonclick hidden">Thank you for clicking!</span>
                     </button>
 
                     <div id="demo-single" class="collapse">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
-                        3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
-                        laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
-                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
-                        anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
-                        of them accusamus labore sustainable VHS.
+                        <p><br />This button code is called manually.</p>
+                        <p>This is the code used on the button:
+<pre class="pre-scrollable">
+&lt;button id=&quot;individual&quot; type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#demo-single&quot;&gt;
+    &lt;span class=&quot;toggleonclick glyphicon glyphicon-thumbs-up hidden&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;toggleonclick&quot;&gt;Click me please!&lt;/span&gt;
+    &lt;span class=&quot;toggleonclick hidden&quot;&gt;Thank you for clicking!&lt;/span&gt;
+&lt;/button&gt;
+</pre>
+                        </p>
+
+                        <p>
+                        This is the code used to initialise clickchange.
+<pre class="pre-scrollable">
+$('#individual').clickChange({
+    when: 'before',
+    parentclass: 'btn-primary btn-success',
+    iconchange: true,
+    iconprefixadd: false,
+    iconprefix: 'toggleonclick',
+    iconclass: 'hidden'
+});
+</pre>
+
+                        </p>
+
+                        <p>
+                            Instead of changing icons, it simply toggles the hidden class, changing what is displaying to the user.
+                        </p>
                     </div>
                 </div>
             </section>
-
 
             <footer>
                 <h3>Acknowledgements</h3>
@@ -148,9 +220,13 @@
 <script type="text/javascript" src="bootstrap-collapse-clickchange.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
-        $('#test2').clickChange({
+        $('#individual').clickChange({
             when: 'before',
-            targetclass: 'baf1'
+            parentclass: 'btn-primary btn-success',
+            iconchange: true,
+            iconprefixadd: false,
+            iconprefix: 'toggleonclick',
+            iconclass: 'hidden'
         });
     });
 </script>
