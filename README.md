@@ -3,7 +3,7 @@ bootstrap-collapse-clickchange
 
 Extends the Bootstrap Collapse jQuery plugin to allow automatic changing of both the target and parent element in the DOM.
 
-**Version 1.0.1**
+**Version 1.0.2**
 
 Usage
 -------
@@ -36,6 +36,14 @@ To do
 
 Change Log
 -------
+
+### 1.0.2
+
+* Calling code for a grouping now works as expected (Issue 1)
+* The pluging now works in IE8 (Issue 3)
+* Updated default settings to match readme, to make the plugin more generic (Issue 2)
+* Refactored code based on JSHint
+* Fixed typo on demonstration page
 
 ### 1.0.1
 

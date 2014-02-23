@@ -5,7 +5,6 @@
     <meta name="author" content="Ben Freke">
     <meta name="description" content="Demonstration of the Bootstrap Collapse ClickChange jQuery plugin">
     <title>Demonstration page for Bootstrap Collapse Clickchange</title>
-    <!--<link href="bootstrap.min.css" rel="stylesheet">-->
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
         /* So it's obvious when the button colour changes */
@@ -16,160 +15,186 @@
 </head>
 <body>
 <div class="container">
-    <div class="row">
-        <div class="col-xs-12">
-            <header>
-                <h1>Bootstrap Collapse ClickChange jQuery plugin <small>Version 1.0.1</small></h1>
-            </header>
+<div class="row">
+<div class="col-xs-12">
+<header>
+    <h1>Bootstrap Collapse ClickChange jQuery plugin
+        <small>Version 1.0.2</small>
+    </h1>
+</header>
 
-            <section class="Information">
-                <p>Tested with:</p>
-                <ul>
-                    <li>jQuery 2.1.0</li>
-                    <li>Bootstrap 3.1.0</li>
-                </ul>
-            </section>
+<section class="Information">
+    <p>Tested with:</p>
+    <ul>
+        <li>jQuery 2.1.0</li>
+        <li>Bootstrap 3.1.0</li>
+    </ul>
+</section>
 
-            <section id="group-demos" class="panel panel-primary">
-                <header class="panel-heading">
-                    <h3 class="panel-title">Multiple Collapse's (i.e. an accordion)</h3>
-                </header>
-                <article class="panel-body">
-                    <p>
-                        This grouping shows various ways to use the plugin.
-                        It is initialised with the following settings.
-                    </p>
-                    <p>
-                        <code>
-                            data-iconchange="true" data-click="clickchange"
-                        </code>
-                    </p>
-                    <div class="panel-group" id="accordion" data-iconchange="true" data-click="clickchange">
-                        <div class="panel panel-info">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                                        Collapse within a collapse
-                                        <span class="glyphicon glyphicon-chevron-down"></span>
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapseOne" class="panel-collapse collapse">
-                                <div class="panel-body">
+<section id="group-demos" class="panel panel-primary">
+    <header class="panel-heading">
+        <h3 class="panel-title">Multiple Collapse's (i.e. an accordion)</h3>
+    </header>
+    <article class="panel-body">
+        <p>
+            This grouping shows various ways to use the plugin.
+            It is initialised with the following settings.
+        </p>
 
-                                    <div class="panel-group" id="inside-accordion" data-click="clickchange">
-                                        <div class="panel panel-default">
-                                            <header class="panel-heading">
-                                                <h4 class="panel-title">
-                                                    <a data-toggle="collapse" data-parent="#inside-accordion" href="#insideOne">
-                                                        <span class="glyphicon glyphicon-question-sign"></span>
-                                                        Collapse inside a collapse
-                                                        <span class="glyphicon glyphicon-chevron-down"></span>
-                                                    </a>
-                                                </h4>
-                                            </header>
-                                            <div id="insideOne" class="panel-collapse collapse">
-                                                <article class="panel-body">
-                                                    This sort of structure is useful for categorising FAQs. I'm sure there are many other uses as well.
-                                                </article>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-default">
-                                            <header class="panel-heading">
-                                                <h4 class="panel-title">
-                                                    <a data-toggle="collapse" data-parent="#inside-accordion" href="#insideTwo">
-                                                        <span class="glyphicon glyphicon-question-sign"></span>
-                                                        These icons do not change, to highlight that each collapse grouping has it's own attributes.
-                                                        <span class="glyphicon glyphicon-chevron-down"></span>
-                                                    </a>
-                                                </h4>
-                                            </header>
-                                            <div id="insideTwo" class="panel-collapse collapse">
-                                                <article class="panel-body">
-                                                    Nifty.
-                                                </article>
-                                            </div>
-                                        </div>
-                                    </div>
+        <p>
+            <code>
+                data-iconchange="true" data-click="clickchange"
+            </code>
+        </p>
+
+        <div class="panel-group" id="accordion" data-iconchange="true" data-click="clickchange"
+             data-iconclass="chevron-up chevron-down">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                            Collapse within a collapse
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div class="panel-group" id="inside-accordion" data-click="clickchange">
+                            <div class="panel panel-default">
+                                <header class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#inside-accordion"
+                                           href="#insideOne">
+                                            <span class="glyphicon glyphicon-question-sign"></span>
+                                            Collapse inside a collapse
+                                            <span class="glyphicon glyphicon-chevron-down"></span>
+                                        </a>
+                                    </h4>
+                                </header>
+                                <div id="insideOne" class="panel-collapse collapse">
+                                    <article class="panel-body">
+                                        This sort of structure is useful for categorising FAQs. I'm sure
+                                        there are many other uses as well.
+                                    </article>
                                 </div>
                             </div>
-                        </div>
-                        <div class="panel panel-info">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
-                                       data-when="after" data-iconchange="true" data-click="clickchange">
-                                        Individual options inside a group
-                                        <span class="glyphicon glyphicon-chevron-down"></span>
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapseTwo" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    On this link the event is set to fire after the collapse has happened, instead of the default.
-                                    On the other collapses in the group, the icon changes before the collapse.
-                                    This is done via
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-info">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                                        Group buttons to highlight the selected options
-                                        <span class="glyphicon glyphicon-chevron-down"></span>
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapseThree" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <div class="row" id="btngroup" data-click="clickchange" data-iconchange="true" data-iconclass="ok-sign remove-sign" data-parentclass="btn-danger btn-success">
-                                        <div class="col-xs-4">
-                                            <div class="btn-group btn-group-lg">
-                                                <button data-target="#btntarget1" data-toggle="collapse" type="button" class="btn btn-danger" data-parent="#btngroup" ><span class="glyphicon glyphicon-ok-sign"></span></button>
-                                                <button data-target="#btntarget2" data-toggle="collapse" type="button" class="btn btn-danger" data-parent="#btngroup" ><span class="glyphicon glyphicon-ok-sign"></span></button>
-                                                <button data-target="#btntarget3" data-toggle="collapse" type="button" class="btn btn-danger" data-parent="#btngroup" ><span class="glyphicon glyphicon-ok-sign"></span></button>
-                                                <button data-target="#btntarget4" data-toggle="collapse" type="button" class="btn btn-danger" data-parent="#btngroup" ><span class="glyphicon glyphicon-ok-sign"></span></button>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-8">
-                                            <div class="collapse" id="btntarget1">
-                                                <p>First</p>
-                                            </div>
-                                            <div class="collapse" id="btntarget2">
-                                                <p>Second</p>
-                                            </div>
-                                            <div class="collapse" id="btntarget3">
-                                                <p>Third</p>
-                                            </div>
-                                            <div class="collapse" id="btntarget4">
-                                                <p>Fourth</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
+                            <div class="panel panel-default">
+                                <header class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#inside-accordion"
+                                           href="#insideTwo">
+                                            <span class="glyphicon glyphicon-question-sign"></span>
+                                            These icons do not change, to highlight that each collapse
+                                            grouping has it's own attributes. For this to work as expected, clickchange
+                                            must be initialised on the sub collapse group as well.
+                                            <span class="glyphicon glyphicon-chevron-down"></span>
+                                        </a>
+                                    </h4>
+                                </header>
+                                <div id="insideTwo" class="panel-collapse collapse">
+                                    <article class="panel-body">
+                                        Nifty. In a future diversion the requirement to initialise clickchange will be
+                                        removed.
+                                    </article>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </article>
-            </section>
-
-            <section class="panel panel-primary">
-                <div class="panel-heading">
-                    <h2 class="panel-title">Demo of a stand alone collapse</h2>
                 </div>
-                <div class="panel-body">
-                    <button id="individual" type="button" class="btn btn-primary" data-toggle="collapse"
-                            data-target="#demo-single">
-                        <span class="toggleonclick glyphicon glyphicon-thumbs-up hidden"></span>
-                        <span class="toggleonclick">Click me please!</span>
-                        <span class="toggleonclick hidden">Thank you for clicking!</span>
-                    </button>
+            </div>
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" data-when="after">
+                            Individual options inside a group
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>
+                            On this link the event is set to fire after the collapse has happened, instead of
+                            the default.
+                        </p>
 
-                    <div id="demo-single" class="collapse">
-                        <p><br />This button code is called manually.</p>
-                        <p>This is the code used on the button:
+                        <p>
+                            On the other collapses in the group, the icon changes before the collapse.
+                            This is done by applying all the data elements to this element that are different to the
+                            parent.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                            Group buttons to highlight the selected options
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div class="row" id="btngroup" data-click="clickchange" data-iconchange="true"
+                             data-iconclass="ok-sign remove-sign" data-parentclass="btn-danger btn-success">
+                            <div class="col-xs-4">
+                                <div class="btn-group btn-group-lg">
+                                    <button data-target="#btntarget1" data-toggle="collapse" type="button"
+                                            class="btn btn-danger" data-parent="#btngroup"><span
+                                            class="glyphicon glyphicon-ok-sign"></span></button>
+                                    <button data-target="#btntarget2" data-toggle="collapse" type="button"
+                                            class="btn btn-danger" data-parent="#btngroup"><span
+                                            class="glyphicon glyphicon-ok-sign"></span></button>
+                                    <button data-target="#btntarget3" data-toggle="collapse" type="button"
+                                            class="btn btn-danger" data-parent="#btngroup"><span
+                                            class="glyphicon glyphicon-ok-sign"></span></button>
+                                    <button data-target="#btntarget4" data-toggle="collapse" type="button"
+                                            class="btn btn-danger" data-parent="#btngroup"><span
+                                            class="glyphicon glyphicon-ok-sign"></span></button>
+                                </div>
+                            </div>
+                            <div class="col-xs-8">
+                                <div class="collapse" id="btntarget1">
+                                    <p>First</p>
+                                </div>
+                                <div class="collapse" id="btntarget2">
+                                    <p>Second</p>
+                                </div>
+                                <div class="collapse" id="btntarget3">
+                                    <p>Third</p>
+                                </div>
+                                <div class="collapse" id="btntarget4">
+                                    <p>Fourth</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+<section class="panel panel-primary">
+    <div class="panel-heading">
+        <h2 class="panel-title">Demo of a stand alone collapse</h2>
+    </div>
+    <div class="panel-body">
+        <button id="individual" type="button" class="btn btn-primary" data-toggle="collapse"
+                data-target="#demo-single">
+            <span class="toggleonclick glyphicon glyphicon-thumbs-up hidden"></span>
+            <span class="toggleonclick">Click me please!</span>
+            <span class="toggleonclick hidden">Thank you for clicking!</span>
+        </button>
+
+        <div id="demo-single" class="collapse">
+            <p><br/>This button code is called manually.</p>
+
+            <p>This is the code used on the button:
 <pre class="pre-scrollable">
 &lt;button id=&quot;individual&quot; type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#demo-single&quot;&gt;
     &lt;span class=&quot;toggleonclick glyphicon glyphicon-thumbs-up hidden&quot;&gt;&lt;/span&gt;
@@ -177,10 +202,10 @@
     &lt;span class=&quot;toggleonclick hidden&quot;&gt;Thank you for clicking!&lt;/span&gt;
 &lt;/button&gt;
 </pre>
-                        </p>
+            </p>
 
-                        <p>
-                        This is the code used to initialise clickchange.
+            <p>
+                This is the code used to initialise clickchange.
 <pre class="pre-scrollable">
 $('#individual').clickChange({
     when: 'before',
@@ -192,32 +217,33 @@ $('#individual').clickChange({
 });
 </pre>
 
-                        </p>
+            </p>
 
-                        <p>
-                            Instead of changing icons, it simply toggles the hidden class, changing what is displaying to the user.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <footer>
-                <h3>Acknowledgements</h3>
-                <ul>
-                    <li>Bootstrap for an awesome framework</li>
-                    <li><a href="https://cameronspear.com">Cameron Spear</a> for their awesome <a
-                            href="https://github.com/CWSpear/bootstrap-hover-dropdown">Bootstrap Hover dropdown</a>
-                        plugin
-                    </li>
-                </ul>
-            </footer>
+            <p>
+                Instead of changing icons, it simply toggles the hidden class, changing what is displaying
+                to the user.
+            </p>
         </div>
     </div>
+</section>
+
+<footer>
+    <h3>Acknowledgements</h3>
+    <ul>
+        <li>Bootstrap for an awesome framework</li>
+        <li><a href="https://cameronspear.com">Cameron Spear</a> for their awesome <a
+                href="https://github.com/CWSpear/bootstrap-hover-dropdown">Bootstrap Hover dropdown</a>
+            plugin
+        </li>
+    </ul>
+</footer>
+</div>
+</div>
 </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="bootstrap-collapse-clickchange.min.js"></script>
+<script type="text/javascript" src="bootstrap-collapse-clickchange.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
         $('#individual').clickChange({
