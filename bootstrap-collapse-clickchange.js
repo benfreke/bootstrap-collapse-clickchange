@@ -21,7 +21,7 @@
         'iconchange' : false,
         'iconprefix' : 'glyphicon',
         'iconprefixadd' : true,
-        'iconclass' : 'chevron-up chevron-down'
+        'iconclass' : ''
     };
 
     /**
